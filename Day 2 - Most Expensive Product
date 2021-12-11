@@ -1,0 +1,4 @@
+Most Expensive Product = 
+VAR MaxValue = MAX(Products[UnitPrice])
+VAR MaxProduct = CALCULATE(SELECTEDVALUE(Products[ProductName]), Products[UnitPrice] = MaxValue)
+RETURN MaxProduct
