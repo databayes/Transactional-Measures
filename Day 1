@@ -1,0 +1,3 @@
+# Current Products < 20 = CALCULATE([# Products < $20], Products[Discontinued] = False)
+# Products < $20 = SUMX(VALUES(Products[ProductName]), If(Products[Unit Price] < 20, 1, 0))
+# Products = COUNTROWS(Products)
