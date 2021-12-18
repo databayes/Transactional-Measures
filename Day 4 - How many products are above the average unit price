@@ -1,0 +1,6 @@
+# Products > Avg = 
+VAR AvgPrice = [£ Average Unit Price]
+VAR Result = SUMX(VALUES(Products[ProductName]), If(Products[Unit Price] > AvgPrice, 1, 0))
+RETURN Result
+
+£ Average Unit Price = AVERAGE(Products[UnitPrice])
