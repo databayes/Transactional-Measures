@@ -1,0 +1,4 @@
+Avg Products per Order = 
+AVERAGEX(values(Orders[OrderID]), [Total Products])
+
+Total Products = DISTINCTCOUNT(Orders[ProductID])
