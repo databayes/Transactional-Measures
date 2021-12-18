@@ -1,0 +1,4 @@
+# Products Between 15 and 25 incl = 
+CALCULATE([# Products], Products[UnitPrice] >= 15 && Products[UnitPrice] <= 25)
+
+# Products = COUNTROWS(Products)
