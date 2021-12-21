@@ -1,0 +1,7 @@
+# Orders with only one Product = 
+CALCULATE(COUNTROWS('Question8'),'Question8'[@NumberOfProducts] = 1)
+
+
+Question8 = CALCULATETABLE(SUMMARIZE(Orders, Orders[OrderID],
+"@NumberOfProducts", COUNTA(Orders[ProductID])
+))
