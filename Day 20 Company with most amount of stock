@@ -1,0 +1,5 @@
+Company with most amount of stock = 
+VAR MaxxVAlue = MAXX(Products, [Stock Value])
+VAR SupplierID = CALCULATE(SELECTEDVALUE(Products[SupplierID]), FILTER(Products, [Stock Value] = MaxxVAlue))
+VAR SupplierName = LOOKUPVALUE(Suppliers[CompanyName], Suppliers[SupplierID], SupplierID)
+RETURN SupplierName
