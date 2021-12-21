@@ -1,0 +1,6 @@
+% Females = 
+VAR Female = CALCULATE([# No of Employees], Employees[Gender] = "Female")
+VAR PercFemale = DIVIDE(Female, [# No of Employees])
+RETURN PercFemale
+
+# No of Employees = COUNTROWS(Employees)
