@@ -1,0 +1,7 @@
+# Products Needing Restocking = SUMX(VALUES(Products[ProductID]), IF([Restock level] <= [Stocked units], 0, 1))
+
+Stocked units = 
+SUM(Products[UnitsInStock])
+
+Restock level = 
+SUM(Products[ReorderLevel])
