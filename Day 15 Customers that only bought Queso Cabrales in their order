@@ -1,0 +1,5 @@
+# Customers that only bought Queso Cabrales in their order = 
+SUMX(VALUES(Orders[OrderID]), IF([£ Sales] = [Queso Cabrales Sales], 1, 0))
+
+Queso Cabrales Sales = CALCULATE([£ Sales], Orders[ProductID] = 11)
+£ Sales = SUM(Orders[_Sales])
