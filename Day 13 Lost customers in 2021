@@ -1,0 +1,7 @@
+Lost Customers in 2021 = 
+VAR Jan1st = DATE(YEAR(TODAY()), 1, 1)
+VAR Customers2020 = COUNTROWS(
+    FILTER(
+        SUMMARIZE(Orders, Orders[CustomerID], "FirstOrder", LASTNONBLANKVALUE(Orders[CustomerID], MAX(Orders[OrderDate]))),
+        [FirstOrder] < Jan1st))
+RETURN Customers2020
