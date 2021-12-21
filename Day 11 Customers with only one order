@@ -1,0 +1,2 @@
+# Customers with only one order = 
+CALCULATE(SUMX(VALUES(Orders[CustomerID]), IF([# Distinct Orders] = 1, 1, 0)))
