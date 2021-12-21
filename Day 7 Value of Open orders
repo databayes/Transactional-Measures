@@ -1,0 +1,1 @@
+Value of Open Orders = CALCULATE([Total sales], ISBLANK(Orders[ShippedDate]))
