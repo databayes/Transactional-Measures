@@ -1,0 +1,5 @@
+# Customers who have not purchased Queso Cabrales = 
+VAR NoCustomers = COUNTROWS(VALUES(Orders[CustomerID]))
+VAR NoCustomersPurchasedQueso = CALCULATE(COUNTROWS(VALUES(Orders[CustomerID])), Orders[ProductID] = 11)
+VAR CustomersNoPurchase = NoCustomers - NoCustomersPurchasedQueso
+Return  CustomersNoPurchase
