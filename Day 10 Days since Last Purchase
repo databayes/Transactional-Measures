@@ -1,0 +1,5 @@
+Days since Last Purchase = 
+VAR Today = Today()
+VAR LastOrderDate = CALCULATE(MAX(Orders[OrderDate]), Customers[CustomerID] = "NORTS")
+VAR Result = DATEDIFF(LastOrderDate, Today, DAY)
+RETURN Result
