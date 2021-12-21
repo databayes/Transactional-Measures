@@ -1,0 +1,12 @@
+# Customers that ordered first in 2021 = 
+VAR __Table = 
+    FILTER(
+      KEEPFILTERS(
+        SUMMARIZECOLUMNS('Orders'[CustomerID], "MinOrderDate", CALCULATE(MIN('Orders'[OrderDate])))
+      ),
+      [MinOrderDate] >= DATE(2021, 1, 1)
+    )
+VAR __Result = 
+COUNTROWS(__Table)
+
+RETURN __Result
