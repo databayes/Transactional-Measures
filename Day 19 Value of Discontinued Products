@@ -1,0 +1,1 @@
+£ Value of Discontinued Products = CALCULATE(SUMX(Products, Products[UnitsInStock] * Products[UnitPrice]), Products[Discontinued] = True)
