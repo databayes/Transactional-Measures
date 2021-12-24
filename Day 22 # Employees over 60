@@ -1,0 +1,5 @@
+EmployeeAge = DATEDIFF(SELECTEDVALUE(Employees[BirthDate]), TODAY(), YEAR)
+
+# Employees Over 60 = 
+VAR Result = SUMX(VALUES(Employees[EmployeeID]), IF([EmployeeAge] >= 60, 1, 0))
+RETURN Result
