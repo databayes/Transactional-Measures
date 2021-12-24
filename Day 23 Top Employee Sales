@@ -1,0 +1,8 @@
+Top Employee Sales for 2021 = 
+CALCULATE(
+    SELECTEDVALUE(Employees[Full Name]),
+    TOPN(1,
+    SUMMARIZE(Orders,Employees[Full Name], "Sales", SUMX(VALUES('Calendar'[Year]), CALCULATE([£ Sales],'Calendar'[Year] = 2021))), [Sales], DESC)
+    
+
+)
