@@ -1,0 +1,6 @@
+# Employees hired in 1994 = 
+var hired1994 = COUNTROWS(
+    FILTER(
+        SUMMARIZE(Employees, Employees[EmployeeID], "HireDate", YEAR(SELECTEDVALUE(Employees[HireDate]))),
+        [HireDate] = 1994))
+return hired1994
